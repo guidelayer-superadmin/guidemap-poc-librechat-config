@@ -24,11 +24,11 @@ registration:
     - "competemarketinggroup.com"
 
 endpoints:
-  custom:
+  custom: # 8/28/25 JT - removed many models
     # APIpie
     # https://apipie.ai/dashboard/
     # Script to fetch models: https://github.com/LibreChat-AI/librechat-config-yaml/blob/main/scripts/apipie.py
-    - name: "APIpie"
+    #- name: "APIpie" # 8/28/25 JT - removed many models
       apiKey: "user_provided"
       baseURL: "https://apipie.ai/v1/"
       models:
@@ -816,7 +816,7 @@ endpoints:
 
     # HuggingFace
     # https://huggingface.co/settings/tokens
-    - name: 'HuggingFace'
+    # - name: 'HuggingFace' # 8/28/25 JT - removed many models
       apiKey: 'user_provided'
       baseURL: 'https://api-inference.huggingface.co/v1'
       models:
