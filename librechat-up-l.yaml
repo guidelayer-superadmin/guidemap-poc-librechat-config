@@ -17,6 +17,11 @@ registration:
     - "github"
     - "google"
     - "openid"
+  allowedDomains: # added 8/28/25
+    - "helpflow.net"
+    - "guidelayer.ai"
+    - "guidelayer.com"
+    - "competemarketinggroup.com"
 
 endpoints:
   custom:
