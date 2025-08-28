@@ -2186,9 +2186,12 @@ endpoints:
 # gpt-5: #8/28/25 JT - removed, probably not needed
 #  disableStreaming: true #8/28/25 JT - removed, probably not needed
 
-mcpServers: # 8/28/25 JT - added MCP server
-  business-context-remote:
-    url: https://guidemap-poc-082425-remote-production.up.railway.app/sse
-    type: sse
-    headers: 
+mcpServers:
+  businessContext:
+    transport: "sse"
+    url: "https://guidemap-poc-082425-remote-production.up.railway.app/sse"
+    headers:
       Authorization: "Bearer pguidemap92064"
+    # optional: per-user overrides (keep empty to prompt users)
+    customUserVars:
+      BUSINESS_API_TOKEN: ""
