@@ -2183,5 +2183,5 @@ endpoints:
       summaryModel: "grok-beta"
       forcePrompt: false
       modelDisplayLabel: "Grok"
-gpt-5:
-  disableStreaming: true # 8/28/25 JT - added for gpt-5 per google research
+# gpt-5: #8/28/25 JT - removed, probably not needed
+#  disableStreaming: true #8/28/25 JT - removed, probably not needed
