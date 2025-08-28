@@ -1,0 +1,56 @@
+# Minimal, safe defaults for a multi-client MVP
+registration:
+  allowedDomains:
+    - "guidelayer.com"   # add pilot client domains here
+    # - "client1.com"
+    # - "client2.com"
+
+models:
+  openai:
+    label: "OpenAI (BYO key)"
+    apiKey: "${OPENAI_API_KEY}"   # set to 'user_provided' in env to force per-user keys
+    baseURL: "https://api.openai.com/v1"
+    models:
+      - id: "gpt-4o-mini"
+      - id: "gpt-4.1"             # adjust to the models you plan to expose
+
+providers:
+  # Let users bring their own keys (set these envs to 'user_provided' in Railway)
+  openai:
+    apiKey: "${OPENAI_API_KEY}"
+
+mcpServers:
+  googleCalendar:
+    command: "npx"
+    args: ["@modelcontextprotocol/server-google-calendar"]
+    customUserVars:                # each user fills these in the LibreChat MCP UI
+      GOOGLE_CLIENT_ID: ""
+      GOOGLE_CLIENT_SECRET: ""
+      GOOGLE_REFRESH_TOKEN: ""
+  asana:
+    command: "npx"
+    args: ["@modelcontextprotocol/server-asana"]
+    customUserVars:
+      ASANA_ACCESS_TOKEN: ""
+  pipedrive:
+    command: "npx"
+    args: ["@modelcontextprotocol/server-pipedrive"]
+    customUserVars:
+      PIPEDRIVE_API_TOKEN: ""
+  businessContext:
+    command: "node"
+    args: ["./servers/business-context/index.js"]  # your custom MCP server path or package
+    customUserVars:
+      TENANT_ID: ""
+      API_TOKEN: ""
+
+agents:
+  - name: "SalesOps Agent"
+    description: "Plans pitch meetings and coordinates CRM/Calendar/Asana"
+    instructions: |
+      You are the SalesOps Agent. Use the Business Context MCP to identify stakeholders, 
+      check availability in Google Calendar, and assign preparation in Asana.
+      Ask for confirmation when you need missing details.
+    provider: "openai"
+    model: "gpt-4o-mini"
+    tools: ["googleCalendar", "asana", "pipedrive", "businessContext"]
