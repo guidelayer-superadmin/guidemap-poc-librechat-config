@@ -623,7 +623,7 @@ endpoints:
 
     # cohere
     # Model list: https://dashboard.cohere.com/playground/chat
-    - name: "cohere"
+    # - name: "cohere" # 8/28/25 JT - removed many models
       apiKey: "user_provided"
       baseURL: "https://api.cohere.ai/v1"
       models:
@@ -653,7 +653,7 @@ endpoints:
     # deepseek
     # https://platform.deepseek.com/api_keys
     # Model list: https://platform.deepseek.com/api-docs/pricing
-    - name: "deepseek"
+    # - name: "deepseek" # 8/28/25 JT - removed many models
       apiKey: "user_provided"
       baseURL: "https://api.deepseek.com"
       models:
@@ -669,7 +669,7 @@ endpoints:
 
     # Fireworks.ai
     # Models: https://fireworks.ai/models?show=Serverless
-    - name: "Fireworks"
+    # - name: "Fireworks" # 8/28/25 JT - removed many models
       apiKey: "user_provided"
       baseURL: "https://api.fireworks.ai/inference/v1"
       models:
@@ -709,7 +709,7 @@ endpoints:
 
     # GitHub 
     # Models: https://models.inference.ai.azure.com/models
-    - name: "Github Models"
+    # - name: "Github Models" # 8/28/25 JT - removed many models
       iconURL: https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png
       apiKey: "user_provided"
       baseURL: "https://models.inference.ai.azure.com"
@@ -745,7 +745,7 @@ endpoints:
 
     # glhf.chat 
     # Model list (auth header required): https://glhf.chat/models
-    - name: "glhf.chat"
+    # - name: "glhf.chat" # 8/28/25 JT - removed many models
       iconURL: "https://glhf.chat/apple-touch-icon.png"
       apiKey: "user_provided"
       baseURL: "https://glhf.chat/api/openai/v1"
@@ -787,7 +787,7 @@ endpoints:
 
     # groq
     # Model list: https://console.groq.com/settings/limits
-    - name: "groq"
+    # - name: "groq" # 8/28/25 JT - removed many models
       apiKey: "user_provided"
       baseURL: "https://api.groq.com/openai/v1/"
       models:
@@ -912,7 +912,7 @@ endpoints:
 
     # Hyperbolic
     # https://app.hyperbolic.xyz/models
-    - name: 'Hyperbolic'
+    # - name: 'Hyperbolic' # 8/28/25 JT - removed many models
       iconURL: "https://app.hyperbolic.xyz/icon.svg"
       apiKey: 'user_provided'
       baseURL: 'https://api.hyperbolic.xyz/v1/'
@@ -942,7 +942,7 @@ endpoints:
 
     # kluster.ai
     # https://platform.kluster.ai/apikeys
-    - name: "Kluster"
+    # - name: "Kluster" # 8/28/25 JT - removed many models
       iconURL: "https://platform.kluster.ai/cropped-fav-1-144x144.png"
       apiKey: "user_provided"
       baseURL: "https://api.kluster.ai/v1/"
@@ -965,7 +965,7 @@ endpoints:
 
     # Mistral AI API
     # Model list: https://docs.mistral.ai/getting-started/models/
-    - name: "Mistral"
+    # - name: "Mistral" # 8/28/25 JT - removed many models
       apiKey: "user_provided"
       baseURL: "https://api.mistral.ai/v1"
       models:
@@ -1040,7 +1040,7 @@ endpoints:
     # NanoGPT
     # https://nano-gpt.com/api
     # Model list: https://nano-gpt.com/api/models
-    - name: "NanoGPT"
+    # - name: "NanoGPT" # 8/28/25 JT - removed many models
       iconURL: "https://nano-gpt.com/logo.png"
       apiKey: "user_provided"
       baseURL: "https://nano-gpt.com/api/v1/"
@@ -1345,7 +1345,7 @@ endpoints:
 
     # NVIDIA
     # https://build.nvidia.com/explore/discover
-    - name: "Nvidia"
+    # - name: "Nvidia" # 8/28/25 JT - removed many models
       iconURL: "https://raw.githubusercontent.com/LibreChat-AI/librechat-config-yaml/refs/heads/main/icons/nvidia.png"
       apiKey: "user_provided"
       baseURL: "https://integrate.api.nvidia.com/v1/"
@@ -1494,7 +1494,7 @@ endpoints:
     # OpenRouter.ai
     # Model list: https://openrouter.ai/models
     # Script to fetch models: https://github.com/LibreChat-AI/librechat-config-yaml/blob/main/scripts/openrouter.py
-    - name: "OpenRouter"
+    # - name: "OpenRouter" # 8/28/25 JT - removed many models
       apiKey: "user_provided"
       baseURL: "https://openrouter.ai/api/v1"
       models:
@@ -1858,7 +1858,7 @@ endpoints:
 
     # Preplexity
     # Model list: https://docs.perplexity.ai/docs/model-cards
-    - name: "Perplexity"
+    # - name: "Perplexity" # 8/28/25 JT - removed many models
       apiKey: "user_provided"
       baseURL: "https://api.perplexity.ai/"
       models:
@@ -1882,7 +1882,7 @@ endpoints:
 
     # SambaNova
     # https://cloud.sambanova.ai/apis
-    - name: "SambaNova"
+    # - name: "SambaNova" # 8/28/25 JT - removed many models
       iconURL: "https://sambanova.ai/hubfs/logotype_sambanova_orange.png"
       apiKey: "user_provided"
       baseURL: "https://api.sambanova.ai/v1/"
@@ -1912,7 +1912,7 @@ endpoints:
     # together.ai
     # https://api.together.ai/settings/api-keys
     # Model list: https://docs.together.ai/docs/inference-models
-    - name: "together.ai"
+    # - name: "together.ai" # 8/28/25 JT - removed many models
       apiKey: "user_provided"
       baseURL: "https://api.together.xyz"
       models:
@@ -1984,7 +1984,7 @@ endpoints:
 
     # Unify
     # Model list: https://unify.ai/chat
-    - name: "Unify"
+    # - name: "Unify" # 8/28/25 JT - removed many models
       apiKey: "user_provided"
       baseURL: "https://api.unify.ai/v0/"
       models:
@@ -2164,7 +2164,7 @@ endpoints:
 
     # xAI
     # https://x.ai/api
-    - name: "xai"
+    # - name: "xai" # 8/28/25 JT - removed many models
       apiKey: "user_provided"
       baseURL: "https://api.x.ai/v1"
       models:
