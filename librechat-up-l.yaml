@@ -2198,8 +2198,8 @@ mcpServers: # 8/28/25 JT- testing - none worked, needs heavy mod, try with asana
     # args: ["-lc", "set -a && source .env && set +a && npx @roychri/mcp-server-asana"]
     # env: {}
   business-context-remote:
-    type: streamable-http
-    url: https://guidemap-poc-082425-remote-production.up.railway.app/mcp
+    type: sse
+    url: https://guidemap-poc-082425-remote-production.up.railway.app/sse
     headers:
       X-User-ID: "{{LIBRECHAT_USER_ID}}"
       Authorization: Bearer pguidemap92064
