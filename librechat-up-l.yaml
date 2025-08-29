@@ -2188,7 +2188,7 @@ endpoints:
 
 mcpServers: # 8/28/25 JT- testing
   everything: 
-    url: http://localhost:3001/sse
+    url: http://host.docker.internal:3001/sse
   business-context-remote:
     type: "streamable-http"
     url: https://guidemap-poc-082425-remote-production.up.railway.app/mcp
