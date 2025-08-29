@@ -47,7 +47,7 @@ mcpServers:
     type: streamable-http
     url: "https://mcp.notion.com/sse"
     oauth: 
-      redirect_uri: "https://alpha.guidelayer.ai/api/mcp/notion/oauth/callback" # 8/29/25 JT - per https://github.com/danny-avila/LibreChat/discussions/9101
+      redirect_uri: "https://alpha.guidelayer.ai/api/mcp/notion/oauth/callback" # 8/29/25 JT - per https://github.com/danny-avila/LibreChat/discussions/9101, worked as call back to success page. But still didn't actually complete the auth. 
   
   # asana: # 8/29/25 JT - adding asana as test
   #    type: streamable-http
