@@ -43,7 +43,7 @@ mcpServers:
 #    timeout: 30000
 #    initTimeout: 10000 
 
-  business-context-remote:
+  guidemap: # 8/2/25 JT - worked as name "business context remote", just changed to guidemap
     type: sse
     url: "https://guidemap-poc-082425-remote-production.up.railway.app/sse"
     serverInstructions: true
