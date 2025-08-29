@@ -2191,14 +2191,14 @@ endpoints:
 #  disableStreaming: true #8/28/25 JT - removed, probably not needed
 
 mcpServers: # 8/28/25 JT- testing - none worked, needs heavy mod, try with asana or normal mcp
-  everything: 
-    url: http://host.docker.internal:3001/sse
+  # everything: 
+  #  url: http://host.docker.internal:8000/sse
   business-context-remote:
-    type: sse
+    # type: sse
     url: https://guidemap-poc-082425-remote-production.up.railway.app/mcp/sse
-    requiresOauth: false
-    startup: true
-    timeout: 300000
-    headers:
-      Authorization: Bearer pguidemap92064
+    # requiresOauth: false
+    # startup: true
+    # timeout: 300000
+    # headers:
+    #   Authorization: Bearer pguidemap92064
       
