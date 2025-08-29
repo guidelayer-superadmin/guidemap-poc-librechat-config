@@ -2190,7 +2190,7 @@ mcpServers: # 8/28/25 JT- testing
   everything: 
     url: http://host.docker.internal:3001/sse
   business-context-remote:
-    type: "streamable-http"
+    type: streamable-http
     url: https://guidemap-poc-082425-remote-production.up.railway.app/mcp
     requiresOauth: false
     startup: true
