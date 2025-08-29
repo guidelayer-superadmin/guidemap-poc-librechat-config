@@ -44,7 +44,7 @@ mcpServers:
 
 
   notion: # 8/29/25 JT - works, but calls back to localhost. Doens't work. 
-   type: streamable-http
+   type: sse
    url: "https://mcp.notion.com/sse"
    oauth: 
      redirect_uri: "https://alpha.guidelayer.ai/api/mcp/notion/oauth/callback" # 8/25/25 https://alpha.guidelayer.ai/api/mcp/notion/oauth/callback" per https://github.com/danny-avila/LibreChat/discussions/9101
