@@ -61,20 +61,20 @@ endpoints:
   custom:
  
     # Anyscale
-    - name: "Anyscale"
-      apiKey: "${ANYSCALE_API_KEY}"
-      baseURL: "https://api.endpoints.anyscale.com/v1"
-      models:
-        default: [
-          "meta-llama/Llama-2-7b-chat-hf",
-          ]
-        fetch: true
-      titleConvo: true
-      titleModel: "meta-llama/Llama-2-7b-chat-hf"
-      summarize: false
-      summaryModel: "meta-llama/Llama-2-7b-chat-hf"
-      forcePrompt: false
-      modelDisplayLabel: "Anyscale"
+    # - name: "Anyscale"
+    #   apiKey: "${ANYSCALE_API_KEY}"
+    #   baseURL: "https://api.endpoints.anyscale.com/v1"
+    #   models:
+    #     default: [
+    #       "meta-llama/Llama-2-7b-chat-hf",
+    #       ]
+    #     fetch: true
+    #   titleConvo: true
+    #   titleModel: "meta-llama/Llama-2-7b-chat-hf"
+    #   summarize: false
+    #   summaryModel: "meta-llama/Llama-2-7b-chat-hf"
+    #   forcePrompt: false
+    #   modelDisplayLabel: "Anyscale"
  
     # APIpie
     - name: "APIpie"
