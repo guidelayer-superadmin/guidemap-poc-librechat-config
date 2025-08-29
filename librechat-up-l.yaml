@@ -42,7 +42,7 @@ mcpServers:
     #    X-User-ID: "{{LIBRECHAT_USER_ID}}"
     #    Authorization: Bearer pguidemap92064
 
-  notion: 
+  notion: # 8/29/25 JT - works, but calls back to localhost
     type: streamable-http
     url: "https://mcp.notion.com/sse"
   
