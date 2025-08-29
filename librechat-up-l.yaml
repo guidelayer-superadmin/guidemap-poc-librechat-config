@@ -43,8 +43,8 @@ mcpServers:
     #    Authorization: Bearer pguidemap92064
   
   asana: # 8/29/25 JT - adding asana as test
-    type: streamable-http
-    url: "https://mcp.asana.com/sse"
+    type: sse
+    url: "https://mcp.asana.com/mcp"
     serverInstructions: true
     timeout: 30000
     initTimeout: 10000
