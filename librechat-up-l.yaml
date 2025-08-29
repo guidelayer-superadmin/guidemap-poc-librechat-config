@@ -45,6 +45,8 @@ mcpServers:
   notion: # 8/29/25 JT - works, but calls back to localhost
     type: streamable-http
     url: "https://mcp.notion.com/sse"
+    oauth: 
+      redirect_uri: "https://alpha.guidelayer.ai/oauth/callback"
   
   # asana: # 8/29/25 JT - adding asana as test
   #    type: streamable-http
