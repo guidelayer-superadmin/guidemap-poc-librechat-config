@@ -54,7 +54,7 @@ mcpServers:
 
   guidemap:
       type: streamable-http
-      url: "https://guidemap-poc-082425-mcpnew-production.up.railway.app"
+      url: "https://guidemap-poc-082425-mcpnew-production.up.railway.app/mcp"
       # If LibreChat requires an explicit path to the MCP endpoint, uncomment:
       # path: "/mcp"
       serverInstructions: true
