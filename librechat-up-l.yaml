@@ -39,14 +39,14 @@ mcpServers:
    type: sse
    url: "https://mcp.notion.com/sse"
    oauth: 
-     redirect_uri: "https://alpha.guidelayer.ai/api/mcp/notion/oauth/callback" # 8/25/25 https://alpha.guidelayer.ai/api/mcp/notion/oauth/callback" per https://github.com/danny-avila/LibreChat/discussions/9101
+     redirect_uri: "https://alpha.guidelayer.ai/api/mcp/notion/oauth/callback"
    serverInstructions: true
    timeout: 30000
    initTimeout: 10000
 
   asana: # 8/29/25 JT - testing again with type: sse per notion working
     type: streamable-http
-    url: "https://mcp.asana.com/mcp"
+    url: "https://mcp.asana.com/sse"
     oauth: 
       redirect_uri: "https://alpha.guidelayer.ai/api/mcp/asana/oauth/callback"
     serverInstructions: true
