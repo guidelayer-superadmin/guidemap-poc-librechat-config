@@ -2194,5 +2194,5 @@ mcpServers: # 8/28/25 JT- testing
     startup: true
     timeout: 300000
     headers:
-      Authorization: "Bearer pguidemap92064"
+      Authorization: Bearer pguidemap92064
       
