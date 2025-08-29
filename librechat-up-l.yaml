@@ -43,23 +43,23 @@ mcpServers:
     #    Authorization: Bearer pguidemap92064
 
 
-#  notion: # 8/29/25 JT - works, but calls back to localhost. Doens't work. 
-#    type: streamable-http
-#    url: "https://mcp.notion.com/sse"
-#    oauth: 
-#      redirect_uri: "https://alpha.guidelayer.ai/api/mcp/notion/oauth/callback" # 8/25/25 https://alpha.guidelayer.ai/api/mcp/notion/oauth/callback" per https://github.com/danny-avila/LibreChat/discussions/9101
-#    serverInstructions: true
-#    timeout: 30000
-#    initTimeout: 10000
+ notion: # 8/29/25 JT - works, but calls back to localhost. Doens't work. 
+   type: streamable-http
+   url: "https://mcp.notion.com/sse"
+   oauth: 
+     redirect_uri: "https://alpha.guidelayer.ai/api/mcp/notion/oauth/callback" # 8/25/25 https://alpha.guidelayer.ai/api/mcp/notion/oauth/callback" per https://github.com/danny-avila/LibreChat/discussions/9101
+   serverInstructions: true
+   timeout: 30000
+   initTimeout: 10000
 
-  asana: # 8/29/25 JT - adding asana as test. Doens't work. 
-      type: streamable-http
-      url: "https://mcp.asana.com/sse"
-      oauth: 
-        redirect_uri: "https://alpha.guidelayer.ai/api/mcp/asana/oauth/callback"
-      serverInstructions: true
-      timeout: 30000
-      initTimeout: 10000
+#  asana: # 8/29/25 JT - adding asana as test. Doens't work. 
+#      type: streamable-http
+#      url: "https://mcp.asana.com/sse"
+#      oauth: 
+#        redirect_uri: "https://alpha.guidelayer.ai/api/mcp/asana/oauth/callback"
+#      serverInstructions: true
+#      timeout: 30000
+#      initTimeout: 10000
 
 # business-context-remote: # 8/29/25 JT - Doens't work. 
   #   type: streamable-http
