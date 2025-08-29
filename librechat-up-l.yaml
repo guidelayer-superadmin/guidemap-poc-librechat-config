@@ -45,8 +45,8 @@ mcpServers:
    initTimeout: 10000
 
   asana: # 8/29/25 JT - testing again with type: sse per notion working
-    type: sse
-    url: "https://mcp.asana.com/sse"
+    type: streamable-http
+    url: "https://mcp.asana.com/mcp"
     oauth: 
       redirect_uri: "https://alpha.guidelayer.ai/api/mcp/asana/oauth/callback"
     serverInstructions: true
