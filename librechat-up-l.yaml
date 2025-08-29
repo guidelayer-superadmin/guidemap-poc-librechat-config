@@ -2186,7 +2186,7 @@ endpoints:
 # gpt-5: #8/28/25 JT - removed, probably not needed
 #  disableStreaming: true #8/28/25 JT - removed, probably not needed
 
-mcpServers: # 8/28/25 JT- testing
+mcpServers: # 8/28/25 JT- testing - none worked, needs heavy mod, try with asana or normal mcp
   everything: 
     url: http://host.docker.internal:3001/sse
   business-context-remote:
