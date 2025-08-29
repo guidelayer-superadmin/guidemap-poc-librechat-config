@@ -2193,13 +2193,18 @@ endpoints:
 mcpServers: # 8/28/25 JT- testing - none worked, needs heavy mod, try with asana or normal mcp
   # everything: 
   #  url: http://host.docker.internal:8000/sse
-  asana: 
-    command: bash
-    args: ["-lc", "set -a && source .env && set +a && npx @roychri/mcp-server-asana"]
-    env: {}
-  # business-context-remote:
-    # type: sse
-    # url: https://guidemap-poc-082425-remote-production.up.railway.app/mcp/sse
+  # asana: 
+    # command: bash
+    # args: ["-lc", "set -a && source .env && set +a && npx @roychri/mcp-server-asana"]
+    # env: {}
+  business-context-remote:
+    type: streamable-http
+    url: https://guidemap-poc-082425-remote-production.up.railway.app/mcp
+    headers:
+      X-User-ID: "{{LIBRECHAT_USER_ID}}"
+      Authorization: Bearer pguidemap92064
+    timeout: 30000
+    serverInstructions: true
     # requiresOauth: false
     # startup: true
     # timeout: 300000
