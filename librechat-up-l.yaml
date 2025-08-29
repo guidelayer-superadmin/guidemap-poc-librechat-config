@@ -2187,6 +2187,12 @@ endpoints:
 #  disableStreaming: true #8/28/25 JT - removed, probably not needed
 
 mcpServers: # 8/28/25 JT- testing
-  notionOfficial:
+  business-context-remote:
     type: streamable-http
-    url: "https://mcp.notion.com/mcp"
+    url: https://guidemap-poc-082425-remote-production.up.railway.app/mcp
+    headers:
+      Authorization: Bearer pguidemap92064
+    timeout: 60000
+    startup: true
+    chatMenu: true
+    requiresOauth: false
