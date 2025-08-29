@@ -1,6 +1,6 @@
 version: 1.2.8 # 8/29/25 JT - JC's version
 
-cache: true
+cache: false # 8/29/25 JT - changed, as yml seemingly not used
 
 interface:
   # MCP Servers UI configuration
