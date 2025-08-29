@@ -38,6 +38,13 @@ mcpServers:
     serverInstructions: true
     timeout: 30000
     initTimeout: 10000
+  
+  asana: # 8/29/25 JT - adding asana as test
+    type: streamable-http
+    url: "https://mcp.asana.com/sse"
+    serverInstructions: true
+    timeout: 30000
+    initTimeout: 10000
 #  headers:
 #    X-User-ID: "{{LIBRECHAT_USER_ID}}"
 #    Authorization: Bearer pguidemap92064
