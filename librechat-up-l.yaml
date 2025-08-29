@@ -43,7 +43,7 @@ mcpServers:
     #    Authorization: Bearer pguidemap92064
 
 
- notion: # 8/29/25 JT - works, but calls back to localhost. Doens't work. 
+  notion: # 8/29/25 JT - works, but calls back to localhost. Doens't work. 
    type: streamable-http
    url: "https://mcp.notion.com/sse"
    oauth: 
