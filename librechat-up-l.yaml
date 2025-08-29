@@ -38,8 +38,9 @@ mcpServers:
     serverInstructions: true
     timeout: 30000
     initTimeout: 10000
-  #    X-User-ID: "{{LIBRECHAT_USER_ID}}"
-#    Authorization: Bearer pguidemap92064
+    #  headers: # 8/29/25 JT - added back
+    #    X-User-ID: "{{LIBRECHAT_USER_ID}}"
+    #    Authorization: Bearer pguidemap92064
   
   asana: # 8/29/25 JT - adding asana as test
     type: streamable-http
@@ -47,11 +48,6 @@ mcpServers:
     serverInstructions: true
     timeout: 30000
     initTimeout: 10000
-    oauth:
-      redirect_url: https://alpha.guidelayer.ai/oauth/callback
-#  headers:
-  
-  
 
 # business-context-remote:
   #   type: streamable-http
