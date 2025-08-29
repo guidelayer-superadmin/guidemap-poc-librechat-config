@@ -25,16 +25,6 @@ mcpServers:
 #     timeout: 30000                # request timeout (ms)
 #     initTimeout: 10000            # startup timeout (ms)
 
-#  business-context-remote: # 8/25/25 JT - added back, Doens't work. 
-#    type: streamable-http
-#    url: "https://guidemap-poc-082425-remote-production.up.railway.app/mcp"
-#    serverInstructions: true
-#    timeout: 30000
-#    initTimeout: 10000
-    #  headers: # 8/29/25 JT - added back
-    #    X-User-ID: "{{LIBRECHAT_USER_ID}}"
-    #    Authorization: Bearer pguidemap92064
-
   notion: # 8/29/25 JT - finally worked with type: sse, no other changes. 
    type: sse
    url: "https://mcp.notion.com/sse"
@@ -44,14 +34,23 @@ mcpServers:
    timeout: 30000
    initTimeout: 10000
 
-  asana: # 8/29/25 JT - testing again with type: sse per notion working
+#  asana: # 8/29/25 JT - tested after notion worked, this is not working.
+#    type: sse
+#    url: "https://mcp.asana.com/sse"
+#    oauth: 
+#      redirect_uri: "https://alpha.guidelayer.ai/api/mcp/asana/oauth/callback"
+#    serverInstructions: true
+#    timeout: 30000
+#    initTimeout: 10000 
+
+  business-context-remote:
     type: sse
-    url: "https://mcp.asana.com/sse"
-    oauth: 
-      redirect_uri: "https://alpha.guidelayer.ai/api/mcp/asana/oauth/callback"
+    url: "https://guidemap-poc-082425-remote-production.up.railway.app/sse"
     serverInstructions: true
     timeout: 30000
-    initTimeout: 10000   
+    initTimeout: 10000
+    headers:
+      Authorization: Bearer pguidemap92064
 
 registration:
   socialLogins: ["discord", "facebook", "github", "google", "openid"]
