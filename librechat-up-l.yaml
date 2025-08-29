@@ -52,6 +52,15 @@ mcpServers:
 #    timeout: 30000
 #    initTimeout: 10000
 
+  guidemap:
+      type: streamable-http
+      url: "https://guidemap-poc-082425-mcpnew-production.up.railway.app"
+      # If LibreChat requires an explicit path to the MCP endpoint, uncomment:
+      # path: "/mcp"
+      serverInstructions: true
+      timeout: 30000
+      initTimeout: 10000
+
   # asana: # 8/29/25 JT - adding asana as test. Doens't work. 
   #    type: streamable-http
   #    url: "https://mcp.asana.com/sse"
