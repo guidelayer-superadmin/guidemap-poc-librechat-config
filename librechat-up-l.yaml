@@ -25,43 +25,41 @@ mcpServers:
 #     timeout: 30000                # request timeout (ms)
 #     initTimeout: 10000            # startup timeout (ms)
 
-  composio: # 8/25/25 JT - commented out, this does appear though
-     type: streamable-http
-     url: "https://mcp.composio.dev/composio/server/349bd680-0295-4b79-9708-2108345b7d11/mcp?include_composio_helper_actions=true"
-     serverInstructions: true     # include server-provided usage guidance
-     timeout: 30000               # per-request timeout (ms)
-     initTimeout: 10000           # initialization timeout (ms)
+#   composio: # 8/25/25 JT - commented out, this does appear though. Doens't work. 
+#     type: streamable-http
+#     url: "https://mcp.composio.dev/composio/server/349bd680-0295-4b79-9708-2108345b7d11/mcp?include_composio_helper_actions=true"
+#     serverInstructions: true     # include server-provided usage guidance
+#     timeout: 30000               # per-request timeout (ms)
+#     initTimeout: 10000           # initialization timeout (ms)
 
-  business-context-remote: # 8/25/25 JT - added back
-    type: streamable-http
-    url: "https://guidemap-poc-082425-remote-production.up.railway.app/mcp"
-    serverInstructions: true
-    timeout: 30000
-    initTimeout: 10000
+#  business-context-remote: # 8/25/25 JT - added back, Doens't work. 
+#    type: streamable-http
+#    url: "https://guidemap-poc-082425-remote-production.up.railway.app/mcp"
+#    serverInstructions: true
+#    timeout: 30000
+#    initTimeout: 10000
     #  headers: # 8/29/25 JT - added back
     #    X-User-ID: "{{LIBRECHAT_USER_ID}}"
     #    Authorization: Bearer pguidemap92064
 
 
-  notion: # 8/29/25 JT - works, but calls back to localhost
-    type: streamable-http
-    url: "https://mcp.notion.com/sse"
-    oauth: 
-      client_id: "${AB-NOTION_CLIENTID}" # from url
-      client_secret: "${AB-NOTION_CLIENTSECRET}" # from url
-      redirect_uri: "https://alpha.guidelayer.ai/api/mcp/notion/oauth/callback" # 8/25/25 https://alpha.guidelayer.ai/api/mcp/notion/oauth/callback" per https://github.com/danny-avila/LibreChat/discussions/9101
-    serverInstructions: true
-    timeout: 30000
-    initTimeout: 10000
+#  notion: # 8/29/25 JT - works, but calls back to localhost. Doens't work. 
+#    type: streamable-http
+#    url: "https://mcp.notion.com/sse"
+#    oauth: 
+#      redirect_uri: "https://alpha.guidelayer.ai/api/mcp/notion/oauth/callback" # 8/25/25 https://alpha.guidelayer.ai/api/mcp/notion/oauth/callback" per https://github.com/danny-avila/LibreChat/discussions/9101
+#    serverInstructions: true
+#    timeout: 30000
+#    initTimeout: 10000
 
-  # asana: # 8/29/25 JT - adding asana as test
+  # asana: # 8/29/25 JT - adding asana as test. Doens't work. 
   #    type: streamable-http
   #    url: "https://mcp.asana.com/sse"
   #    serverInstructions: true
   #    timeout: 30000
   #    initTimeout: 10000
 
-# business-context-remote:
+# business-context-remote: # 8/29/25 JT - Doens't work. 
   #   type: streamable-http
   #   url: "https://guidemap-poc-082425-remote-production.up.railway.app/mcp"
   #   headers:
