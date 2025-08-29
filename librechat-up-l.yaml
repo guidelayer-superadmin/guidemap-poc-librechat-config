@@ -35,7 +35,7 @@ mcpServers:
     #    X-User-ID: "{{LIBRECHAT_USER_ID}}"
     #    Authorization: Bearer pguidemap92064
 
-  notion: # 8/29/25 JT - works, but calls back to localhost. Doens't work. 
+  notion: # 8/29/25 JT - finally worked with type: sse, no other changes. 
    type: sse
    url: "https://mcp.notion.com/sse"
    oauth: 
@@ -44,14 +44,14 @@ mcpServers:
    timeout: 30000
    initTimeout: 10000
 
-#  asana: # 8/29/25 JT - adding asana as test. Doens't work. 
-#      type: streamable-http
-#      url: "https://mcp.asana.com/sse"
-#      oauth: 
-#        redirect_uri: "https://alpha.guidelayer.ai/api/mcp/asana/oauth/callback"
-#      serverInstructions: true
-#      timeout: 30000
-#      initTimeout: 10000   
+asana: # 8/29/25 JT - testing again with type: sse per notion working
+    type: sse
+    url: "https://mcp.asana.com/sse"
+    oauth: 
+      redirect_uri: "https://alpha.guidelayer.ai/api/mcp/asana/oauth/callback"
+    serverInstructions: true
+    timeout: 30000
+    initTimeout: 10000   
 
 registration:
   socialLogins: ["discord", "facebook", "github", "google", "openid"]
