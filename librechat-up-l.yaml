@@ -47,7 +47,9 @@ mcpServers:
     type: streamable-http
     url: "https://mcp.notion.com/sse"
     oauth: 
-      redirect_uri: "https://mcp.notion.com/callback" # 8/25/25 JT Was https://alpha.guidelayer.ai/api/mcp/notion/oauth/callback" per https://github.com/danny-avila/LibreChat/discussions/9101 worked as call back to success page. But still didn't actually complete the auth. AI advised to use https://mcp.notion.com/callback. 
+      client_id: "${AB-NOTION_CLIENTID}" # from url
+      client_secret: "${AB-NOTION_CLIENTSECRET}" # from url
+      redirect_uri: "https://alpha.guidelayer.ai/api/mcp/notion/oauth/callback" # 8/25/25 https://alpha.guidelayer.ai/api/mcp/notion/oauth/callback" per https://github.com/danny-avila/LibreChat/discussions/9101
     serverInstructions: true
     timeout: 30000
     initTimeout: 10000
