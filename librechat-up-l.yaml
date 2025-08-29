@@ -3,12 +3,16 @@ version: 1.2.4
 cache: true
 
 interface:
+  customWelcome: "Welcome to GuideLayer.ai - Alpha Version"
+  mcpServers:
+    placeholder: 'MCP Servers'
   privacyPolicy:
     externalUrl: 'https://librechat.ai/privacy-policy'
     openNewTab: true
   termsOfService:
     externalUrl: 'https://librechat.ai/tos'
     openNewTab: true
+  
 
 registration:
   socialLogins:
