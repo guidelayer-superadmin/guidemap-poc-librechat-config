@@ -25,14 +25,14 @@ mcpServers:
 #     timeout: 30000                # request timeout (ms)
 #     initTimeout: 10000            # startup timeout (ms)
 
-  notion: # 8/29/25 JT - finally worked with type: sse, no other changes. 
-   type: sse
-   url: "https://mcp.notion.com/sse"
-   oauth: 
-     redirect_uri: "https://alpha.guidelayer.ai/api/mcp/notion/oauth/callback"
-   serverInstructions: true
-   timeout: 30000
-   initTimeout: 10000
+#  notion: # 8/29/25 JT - finally worked with type: sse, no other changes, commented out once guidemap mcp worked. 
+#   type: sse
+#   url: "https://mcp.notion.com/sse"
+#   oauth: 
+#     redirect_uri: "https://alpha.guidelayer.ai/api/mcp/notion/oauth/callback"
+#   serverInstructions: true
+#   timeout: 30000
+#   initTimeout: 10000
 
 #  asana: # 8/29/25 JT - tested after notion worked, this is not working.
 #    type: sse
@@ -51,14 +51,8 @@ mcpServers:
     initTimeout: 10000
     headers:
       Authorization: Bearer pguidemap92064
-  
-  pipedrive: # Configured to use PIPEDRIVE_API_TOKEN from environment
-    command: bash
-    args: ["-lc", "set -a && source .env && set +a && npx pipedrive-mcp"]
-    env: {}
-    serverInstructions: true
-    timeout: 30000
-    initTimeout: 10000
+
+  # 8/29/25 JT - tokens for asana and pipedrive are in env on railway
 
 registration:
   socialLogins: ["discord", "facebook", "github", "google", "openid"]
