@@ -53,13 +53,12 @@ mcpServers:
       Authorization: Bearer pguidemap92064
   
   pipedrive: # Configured to use PIPEDRIVE_API_TOKEN from environment
-    type: sse
-    url: "https://mcp.pipedrive.com/sse"
+    command: bash
+    args: ["-lc", "set -a && source .env && set +a && npx pipedrive-mcp"]
+    env: {}
     serverInstructions: true
     timeout: 30000
     initTimeout: 10000
-    headers:
-      Authorization: "Bearer ${PIPEDRIVE_API_TOKEN}"
 
 registration:
   socialLogins: ["discord", "facebook", "github", "google", "openid"]
