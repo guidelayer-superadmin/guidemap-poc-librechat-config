@@ -2190,8 +2190,8 @@ mcpServers: # 8/28/25 JT- testing
   everything: 
     url: http://host.docker.internal:3001/sse
   business-context-remote:
-    type: streamable-http
-    url: https://guidemap-poc-082425-remote-production.up.railway.app/mcp
+    type: sse
+    url: https://guidemap-poc-082425-remote-production.up.railway.app/mcp/sse
     requiresOauth: false
     startup: true
     timeout: 300000
