@@ -25,12 +25,12 @@ mcpServers:
 #     timeout: 30000                # request timeout (ms)
 #     initTimeout: 10000            # startup timeout (ms)
 
-#  composio: 8/25/25 JT - commented out, this does appear though
-#     type: streamable-http
-#     url: "https://mcp.composio.dev/composio/server/349bd680-0295-4b79-9708-2108345b7d11/mcp?include_composio_helper_actions=true"
-#     serverInstructions: true     # include server-provided usage guidance
-#     timeout: 30000               # per-request timeout (ms)
-#     initTimeout: 10000           # initialization timeout (ms)
+  composio: # 8/25/25 JT - commented out, this does appear though
+     type: streamable-http
+     url: "https://mcp.composio.dev/composio/server/349bd680-0295-4b79-9708-2108345b7d11/mcp?include_composio_helper_actions=true"
+     serverInstructions: true     # include server-provided usage guidance
+     timeout: 30000               # per-request timeout (ms)
+     initTimeout: 10000           # initialization timeout (ms)
 
   business-context-remote:
     type: streamable-http
