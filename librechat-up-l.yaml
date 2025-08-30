@@ -57,6 +57,11 @@ mcpServers:
   google calendar: # 8/30/25 JT - worked! Use mcp.composio.com to setup, Auth'd at composio, Added to librechat.yaml, Redeployed, it worked. 
     type: streamable-http
     url: "https://apollo-3irns8zl6-composio.vercel.app/v3/mcp/620d32da-d8f9-4aeb-8873-7ff5b70b8447/mcp?include_composio_helper_actions=true"
+  
+  asana: 
+    type: streamable-http
+    url: "https://apollo-3irns8zl6-composio.vercel.app/v3/mcp/a4978005-3fa5-4bdd-b7c5-6b939ddb6696/mcp?include_composio_helper_actions=true"
+
 
 registration:
   socialLogins: ["discord", "facebook", "github", "google", "openid"]
