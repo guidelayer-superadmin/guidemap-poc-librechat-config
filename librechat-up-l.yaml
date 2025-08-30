@@ -54,9 +54,9 @@ mcpServers:
 
   # 8/29/25 JT - tokens for asana and pipedrive are in env on railway
 
-  pipedrive:
+  google calendar:
     type: streamable-http
-    url: "https://apollo-3irns8zl6-composio.vercel.app/v3/mcp/fa02198c-7acc-4831-876d-619eeafec599/mcp?user_id=mainuser&include_composio_helper_actions=true"
+    url: "https://apollo-3irns8zl6-composio.vercel.app/v3/mcp/fddc2b29-c681-4640-a9f7-6ff628e7ee04/mcp?user_id=demouser858"
 
 registration:
   socialLogins: ["discord", "facebook", "github", "google", "openid"]
