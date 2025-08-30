@@ -64,7 +64,7 @@ mcpServers:
   
   pipedrive:
     type: streamable-http
-    url: "https://apollo-3irns8zl6-composio.vercel.app/v3/mcp/972ddc92-4184-43e8-95a7-9af9eea88d87/mcp?include_composio_helper_actions=true"
+    url: "https://apollo-3irns8zl6-composio.vercel.app/v3/mcp/2cee626b-7a7b-40da-904b-0fbd2d43caff/mcp?include_composio_helper_actions=true"
 
   slack: 
     type: streamable-http
