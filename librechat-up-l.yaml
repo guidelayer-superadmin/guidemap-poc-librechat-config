@@ -56,7 +56,7 @@ mcpServers:
 
   google calendar:
     type: streamable-http
-    url: "https://apollo-3irns8zl6-composio.vercel.app/v3/mcp/fddc2b29-c681-4640-a9f7-6ff628e7ee04/mcp?user_id=demouser858"
+    url: "https://apollo-3irns8zl6-composio.vercel.app/v3/mcp/620d32da-d8f9-4aeb-8873-7ff5b70b8447/mcp?include_composio_helper_actions=true"
 
 registration:
   socialLogins: ["discord", "facebook", "github", "google", "openid"]
