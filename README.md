@@ -92,6 +92,37 @@ Based on the configuration file, these MCP servers are currently functional:
 ### Direct MCP Servers
 - **Guidemap**: `sse` type with direct Railway deployment URL
 
+## Project Status & Roadmap
+
+### ✅ Completed Tasks
+- [x] **Initial LibreChat Setup**: One-click Railway deployment at alpha.guidelayer.ai
+- [x] **Basic Configuration**: Core LibreChat settings and model endpoints
+- [x] **MCP Server Research**: Extensive troubleshooting and development research
+- [x] **Composio Integration**: Successfully connected MCP servers via Composio
+- [x] **Google Calendar MCP**: Working integration with `streamable-http` type
+- [x] **Asana MCP**: Working integration with `streamable-http` type
+- [x] **Guidemap MCP**: Direct Railway deployment integration
+- [x] **Deployment Process**: Documented Railway deployment trick
+- [x] **Configuration Documentation**: Complete setup guide and troubleshooting
+
+### 🔄 In Progress
+- [ ] **Add core MCPs for GuideMap POC done locally before**:
+  - [x] guidemap (done)
+  - [ ] pipedrive
+  - [ ] asana
+  - [ ] google calendar
+- [ ] **Ensure stable / documentation of above**
+
+### 📋 Upcoming Tasks
+- [ ] **Optimize Agent system prompt / functionality**
+- [ ] **Plan multi user / business MVP usage**
+
+### 🐛 Known Issues & Technical Debt
+- [ ] **Cache Management**: Need to monitor if `cache: false` setting causes performance issues
+- [ ] **Environment Variable Management**: Consider using Railway's built-in secret management more systematically
+
+---
+
 ## Configuration File Structure
 
 The `librechat-up-l.yaml` file contains several key sections:
