@@ -88,6 +88,7 @@ Based on the configuration file, these MCP servers are currently functional:
 ### Composio-Based MCP Servers
 - **Google Calendar**: `streamable-http` type with Composio URL
 - **Asana**: `streamable-http` type with Composio URL
+- **Slack**: `streamable-http` type with Composio URL
 
 ### Direct MCP Servers
 - **Guidemap**: `sse` type with direct Railway deployment URL
@@ -110,9 +111,10 @@ Based on the configuration file, these MCP servers are currently functional:
   - [x] guidemap (done)
   - [x] asana (done)
   - [x] google calendar (done)
-  - [ ] pipedrive (OAuth flow issue - using token auth but not connecting in chat UI)
+  - [x] slack (done)
+  - [ ] pipedrive (OAuth flow still not triggering at Composio - legacy auth configs removed, manual connection added but not working)
 - [ ] **Ensure stable / documentation of above**
-- [ ] **Fix Pipedrive OAuth flow** - need to reset Composio connection to force OAuth authentication
+- [ ] **Fix Pipedrive OAuth flow** - need to resolve Composio authentication to get OAuth working properly
 
 ### 📋 Upcoming Tasks
 - [ ] **Optimize Agent system prompt / functionality**
@@ -157,7 +159,7 @@ The `librechat-up-l.yaml` file contains several key sections:
 
 **Not Working**:
 - `type: sse` with some OAuth-based services (Asana, Notion in some cases)
-- **Pipedrive**: OAuth flow not triggering in Composio, token auth connects but doesn't work in chat UI
+- **Pipedrive**: OAuth flow still not triggering at Composio despite removing legacy auth configs and manually adding connection
 
 ## Environment Variables
 
