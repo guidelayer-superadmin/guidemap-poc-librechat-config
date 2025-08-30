@@ -43,7 +43,7 @@ mcpServers:
 #    timeout: 30000
 #    initTimeout: 10000 
 
-  guidemap: # 8/2/25 JT - worked as name "business context remote", just changed to guidemap
+  guidemap: # 8/29/25 JT - worked as name "business context remote", just changed to guidemap
     type: sse
     url: "https://guidemap-poc-082425-remote-production.up.railway.app/sse"
     serverInstructions: true
@@ -54,7 +54,7 @@ mcpServers:
 
   # 8/29/25 JT - tokens for asana and pipedrive are in env on railway
 
-  google calendar:
+  google calendar: # 8/30/25 JT - worked! Use mcp.composio.com to setup, Auth'd at composio, Added to librechat.yaml, Redeployed, it worked. 
     type: streamable-http
     url: "https://apollo-3irns8zl6-composio.vercel.app/v3/mcp/620d32da-d8f9-4aeb-8873-7ff5b70b8447/mcp?include_composio_helper_actions=true"
 
