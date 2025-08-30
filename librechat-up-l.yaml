@@ -56,8 +56,8 @@ mcpServers:
 
   pipedrive:
     type: streamable-http
-    url: "https://apollo-3irns8zl6-composio.vercel.app/v3/mcp/fa02198c-7acc-4831-876d-619eeafec599/mcp?user_id=jonhelpflowchat"
-    
+    url: "https://apollo-3irns8zl6-composio.vercel.app/v3/mcp/fa02198c-7acc-4831-876d-619eeafec599/mcp?user_id=mainuser"
+
 registration:
   socialLogins: ["discord", "facebook", "github", "google", "openid"]
     
