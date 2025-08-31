@@ -63,16 +63,20 @@ mcpServers:
 
 ### 5. Railway Deployment Trick
 
-**Critical Step**: After updating the YAML configuration, you need to trigger a Railway redeployment:
+**Critical Step**: After ANY changes that need to be reflected in LibreChat, you need to trigger a Railway redeployment. This includes:
+- Changes to the YAML configuration file
+- Changes made at Composio (editing tools available to existing MCP servers, adding new connections, etc.)
+- Any modifications to MCP server configurations
 
+**How to trigger redeployment**:
 1. Go to Railway dashboard
 2. Navigate to the Variables section
-3. Find the config path URL
+3. Find the `CONFIG_PATH` variable
 4. **Add or remove a question mark (?) at the end of the URL**
 5. Save the change
 6. Deploy the changes
 
-This "trick" forces Railway to recognize the configuration as changed and triggers a redeployment, even though the actual configuration hasn't changed.
+This "trick" forces Railway to recognize the configuration as changed and triggers a redeployment, even though the actual configuration hasn't changed. This is necessary because LibreChat reads the configuration from Railway's environment, and changes at Composio or in the YAML file won't take effect until Railway redeploys.
 
 ### 6. Testing MCP Functionality
 
@@ -142,14 +146,16 @@ The `librechat-up-l.yaml` file contains several key sections:
 1. **MCP Not Showing**: 
    - Ensure `cache: false` is set in the configuration
    - Verify the MCP server type is correct (`streamable-http` for Composio)
+   - **Remember**: Any changes at Composio require a Railway redeployment to take effect
 
 2. **Authentication Failures**:
    - Check that OAuth redirect URIs are properly configured
    - Verify API keys and tokens are correctly set in Railway environment variables
 
 3. **Deployment Issues**:
-   - Use the Railway deployment trick (adding/removing `?` from config URL)
+   - Use the Railway deployment trick (adding/removing `?` from `CONFIG_PATH` variable)
    - Ensure all environment variables are properly set
+   - **Important**: Changes made at Composio (editing tools, adding connections) won't appear in LibreChat until Railway redeploys
 
 ### Working vs. Non-Working Configurations
 
@@ -189,8 +195,9 @@ The following environment variables are referenced in the configuration and shou
 For issues or questions regarding this configuration:
 1. Check the troubleshooting section above
 2. Verify all environment variables are set in Railway
-3. Ensure the Railway deployment trick is used after configuration changes
+3. **Always use the Railway deployment trick after ANY changes** (YAML file OR Composio)
 4. Test MCP functionality after each deployment
+5. **Remember**: Changes at Composio require Railway redeployment to appear in LibreChat
 
 ---
 
