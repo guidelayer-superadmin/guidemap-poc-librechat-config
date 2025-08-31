@@ -62,9 +62,9 @@ mcpServers:
     type: streamable-http
     url: "https://apollo-3irns8zl6-composio.vercel.app/v3/mcp/a4978005-3fa5-4bdd-b7c5-6b939ddb6696/mcp?include_composio_helper_actions=true"
   
-  # pipedrive: - # 8/30/25 JT - not working, auth issue at composio
-  #  type: streamable-http
-  #  url: "https://apollo-3irns8zl6-composio.vercel.app/v3/mcp/2cee626b-7a7b-40da-904b-0fbd2d43caff/mcp?include_composio_helper_actions=true"
+  pipedrive: - # 8/30/25 JT - changed to bearer token method of pipedrive 
+    type: streamable-http
+    url: "https://apollo-3irns8zl6-composio.vercel.app/v3/mcp/bd0b076c-5d9c-47df-a409-566342843623/mcp?include_composio_helper_actions=true"
 
   slack: 
     type: streamable-http
