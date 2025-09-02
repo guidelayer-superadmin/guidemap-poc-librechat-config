@@ -66,10 +66,13 @@ mcpServers:
     type: streamable-http
     url: "https://apollo-3irns8zl6-composio.vercel.app/v3/mcp/bd0b076c-5d9c-47df-a409-566342843623/mcp?include_composio_helper_actions=true"
 
+  # slack: # 9/2/25 JT - removed, to try activepieces.com version
+  #   type: streamable-http
+  #   url: "https://apollo-3irns8zl6-composio.vercel.app/v3/mcp/1a9f79a3-3c5a-4fd8-8a3c-d8a88edc524a/mcp?include_composio_helper_actions=true"
+
   slack: 
     type: streamable-http
-    url: "https://apollo-3irns8zl6-composio.vercel.app/v3/mcp/1a9f79a3-3c5a-4fd8-8a3c-d8a88edc524a/mcp?include_composio_helper_actions=true"
-
+    url: "https://cloud.activepieces.com/api/v1/mcp/rCyHZS50w9T57wrhKLeFW/sse"
 
 registration:
   socialLogins: ["discord", "facebook", "github", "google", "openid"]
