@@ -62,9 +62,14 @@ mcpServers:
     type: streamable-http
     url: "https://apollo-3irns8zl6-composio.vercel.app/v3/mcp/a4978005-3fa5-4bdd-b7c5-6b939ddb6696/mcp?include_composio_helper_actions=true"
   
-  pipedrive: # 8/30/25 JT - changed to bearer token method of pipedrive 
+  # pipedrive: # 8/30/25 JT - changed to bearer token method of pipedrive 
+  #   type: streamable-http
+  #  url: "https://apollo-3irns8zl6-composio.vercel.app/v3/mcp/bd0b076c-5d9c-47df-a409-566342843623/mcp?include_composio_helper_actions=true"
+
+  pipedrive: # 9/2/25 JT - added with activepieces, since slack worked. Auth worked there (still had initial "not found" but on retry worked. )
     type: streamable-http
-    url: "https://apollo-3irns8zl6-composio.vercel.app/v3/mcp/bd0b076c-5d9c-47df-a409-566342843623/mcp?include_composio_helper_actions=true"
+    url: "https://cloud.activepieces.com/api/v1/mcp/7wrlTFHseayWYEskvIi6E/sse"
+
 
   # slack: # 9/2/25 JT - removed, to try activepieces.com version
   #   type: streamable-http
@@ -73,6 +78,7 @@ mcpServers:
   slack: 
     type: streamable-http
     url: "https://cloud.activepieces.com/api/v1/mcp/rCyHZS50w9T57wrhKLeFW/sse"
+  
 
 registration:
   socialLogins: ["discord", "facebook", "github", "google", "openid"]
