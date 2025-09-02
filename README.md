@@ -13,12 +13,25 @@ This project provides a LibreChat server configuration that enables:
 
 After extensive troubleshooting and development research, here's the complete workflow for adding MCP servers to LibreChat:
 
-### 1. MCP Server Setup via Composio
+### 1. MCP Server Setup Options
+
+#### Option A: Composio (Original Method)
 
 **Important**: Use [mcp.composio.dev](https://mcp.composio.dev) - **NOT** the main Composio interface. The MCP-specific interface is much simpler and designed specifically for MCP connections.
 
 **Prerequisites**: 
 - Billing@guidelayer.com account at composio
+
+#### Option B: ActivePieces (Easier Alternative)
+
+**Recent Discovery**: ActivePieces appears to be easier to work with than Composio for MCP server setup. Successfully tested with Slack and Pipedrive.
+
+**Advantages**:
+- Simpler authentication flow
+- More reliable OAuth handling
+- Easier to troubleshoot
+
+**Note**: While ActivePieces auth works better, some MCP queries may need troubleshooting for proper resolution in LibreChat.
 
 ### 2. Creating MCP Connections
 
@@ -92,7 +105,10 @@ Based on the configuration file, these MCP servers are currently functional:
 ### Composio-Based MCP Servers
 - **Google Calendar**: `streamable-http` type with Composio URL
 - **Asana**: `streamable-http` type with Composio URL
-- **Slack**: `streamable-http` type with Composio URL
+
+### ActivePieces-Based MCP Servers
+- **Slack**: `streamable-http` type with ActivePieces URL (working)
+- **Pipedrive**: `streamable-http` type with ActivePieces URL (auth working, queries need troubleshooting)
 
 ### Direct MCP Servers
 - **Guidemap**: `sse` type with direct Railway deployment URL
@@ -115,10 +131,10 @@ Based on the configuration file, these MCP servers are currently functional:
   - [x] guidemap (done)
   - [x] asana (done)
   - [x] google calendar (done)
-  - [x] slack (done)
-  - [ ] pipedrive (OAuth flow still not triggering at Composio - legacy auth configs removed, manual connection added but not working)
+  - [x] slack (done - **ActivePieces**)
+  - [x] pipedrive (auth working with **ActivePieces**, but MCP queries not resolving correctly in LibreChat - needs troubleshooting)
 - [ ] **Ensure stable / documentation of above**
-- [ ] **Fix Pipedrive OAuth flow** - need to resolve Composio authentication to get OAuth working properly
+- [ ] **Troubleshoot Pipedrive MCP query resolution** - auth works but queries not working properly in LibreChat
 
 ### 📋 Upcoming Tasks
 - [ ] **Optimize Agent system prompt / functionality**
@@ -165,7 +181,8 @@ The `librechat-up-l.yaml` file contains several key sections:
 
 **Not Working**:
 - `type: sse` with some OAuth-based services (Asana, Notion in some cases)
-- **Pipedrive**: OAuth flow still not triggering at Composio despite removing legacy auth configs and manually adding connection
+- **Pipedrive via Composio**: OAuth flow still not triggering at Composio despite removing legacy auth configs and manually adding connection
+- **Pipedrive via ActivePieces**: Auth works but MCP queries not resolving correctly in LibreChat (needs troubleshooting)
 
 ## Environment Variables
 

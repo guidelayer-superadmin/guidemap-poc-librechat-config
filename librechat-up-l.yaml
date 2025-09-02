@@ -66,7 +66,7 @@ mcpServers:
   #   type: streamable-http
   #  url: "https://apollo-3irns8zl6-composio.vercel.app/v3/mcp/bd0b076c-5d9c-47df-a409-566342843623/mcp?include_composio_helper_actions=true"
 
-  pipedrive: # 9/2/25 JT - added with activepieces, since slack worked. Auth worked there (still had initial "not found" but on retry worked. )
+  pipedrive: # 9/2/25 JT - added with activepieces, since slack worked. Auth worked there (still had initial "not found" but on retry worked). But in LibreChat it doesn't work. 
     type: streamable-http
     url: "https://cloud.activepieces.com/api/v1/mcp/7wrlTFHseayWYEskvIi6E/sse"
 
